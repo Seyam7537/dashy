@@ -52,6 +52,14 @@ appConfig:
   disableUpdateChecks: false
   disableSmartSort: false
   enableErrorReporting: false
+  customCss: |+
+    img.tile-icon {
+        border-radius: 4px; /* Reduced from 10px to 4px for less rounding */
+        width: 50px; /* Set the width to 50px */
+        height: 50px; /* Set the height to 50px */
+        object-fit: cover; /* Ensures the icon covers the entire area without distortion */
+    }
+
 sections:
   - name: Getting Started
     icon: fas fa-rocket
@@ -101,3 +109,40 @@ sections:
       - *ref_3
       - *ref_4
       - *ref_5
+  - name: Education
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_6
+        title: CUNYFirst
+        icon: https://seeklogo.com/images/C/cuny-logo-E85957DB00-seeklogo.com.png
+        url: >-
+          https://home.cunyfirst.cuny.edu/psc/cnyihprd/EMPLOYEE/EMPL/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL
+        id: 0_924_cunyfirst
+      - &ref_7
+        title: Blackboard
+        icon: favicon
+        url: https://bbhosted.cuny.edu/ultra/course
+        id: 1_924_blackboard
+      - &ref_8
+        title: ALEKS
+        icon: https://pbs.twimg.com/media/D_JvxBLXsAAsNze.png
+        url: https://www.aleks.com/login
+        id: 2_924_aleks
+    filteredItems:
+      - *ref_6
+      - *ref_7
+      - *ref_8
+  - name: Cheat Sheet
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items: []
+    filteredItems: []
